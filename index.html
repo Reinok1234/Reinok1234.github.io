@@ -1,0 +1,121 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff95be">
+    <meta name="keywords" content="REINOK1234, weird, notes, reinok1234, web, clonenote">
+    <meta name="author" content="REINOK1234">
+</head>
+
+<document>
+    <style>
+        @font-face {
+    font-family: 'VCR OSD Mono';
+    src: url('VCROSDMono.woff2') format('woff2'),
+        url('VCROSDMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'VCR OSD MONO';
+}
+#bottombar {
+font-family: 'VCR OSD MONO';
+    transition: position 100ms;
+    background: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 13px 13px;
+}
+#topbar {
+    transition: position 100ms;
+    background: whitesmoke;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 13px 13px;
+}
+#coolInput {
+font-family: 'VCR OSD MONO';
+transition: all 600ms;
+ border-image: linear-gradient(45deg, red, blue) 2;
+    padding: 10px 10px;
+    font-size-adjust: 30px;
+}
+#coolInput:hover {
+transition: all 600ms;
+ border-image: linear-gradient(45deg, blue, red) 2;
+    padding: 10px 10px;
+    font-size-adjust: 30px;
+}
+.coolInputbutton {
+transition: all 600ms;
+font-family: 'VCR OSD MONO';
+color: whitesmoke;
+border: none;
+border-radius: 100px;
+ background-image: linear-gradient(45deg, red, blue);
+    padding: 10px 10px;
+}
+.coolInputbutto:hover {
+transition: all 600ms;
+border-radius: 100px;
+ background-image: linear-gradient(45deg, green, blue) 2;
+    padding: 15px 15px;
+}
+
+    </style>
+    <center>
+         <link rel="stylesheet" href="styles.css">
+<script src="scripts.js"></script>
+<div id="topbar">
+    CloneNote
+</div>
+<div id="thediv">
+    <br>
+    <h1 id="post">Text</h1>
+</div>
+
+<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoVe82V27pmYKqVELYqb_LV1bom-2hOig7vg&usqp=CAU">
+<title>CloneNote</title>
+<meta name="description" content="type something and press send to add it. Press the 🖨️ to print">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoVe82V27pmYKqVELYqb_LV1bom-2hOig7vg&usqp=CAU" type="image/x-icon">
+<div id="bottomBar">
+    <input type="message" id="coolInput">
+<button class="coolInputbutton" onclick="upload()">Send</button>
+<button class="coolInputbutton" onclick="print()">🖨️</button>
+<br>
+Type something and press send to add. Press "🖨️" to print. 
+<br>
+------------------------------
+<br>
+By REINOK1234 
+<br>
+-------------------------------
+</div>
+    </center>
+   
+<script>
+    function upload() {
+ let text= document.getElementById('post')
+ let stuff = document.getElementById('coolInput').value
+ // Get the element
+var elem = document.querySelector('#thediv');
+
+// Create a copy of it
+var clone = elem.cloneNode(true);
+
+// Update the ID and add a class
+clone.id = 'elem2';
+clone.classList.add('text-large');
+
+// Inject it into the DOM
+elem.after(clone);
+    text.textContent = (""+stuff+"");
+  } 
+
+</script>
+</document>
